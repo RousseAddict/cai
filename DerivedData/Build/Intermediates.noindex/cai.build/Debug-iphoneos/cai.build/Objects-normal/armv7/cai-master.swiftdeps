@@ -1,0 +1,16 @@
+version: "Swift version 5.6.3-dev (LLVM 72dbaa0dbac49e4, Swift 43f64c8712d4f83)"
+options: "944a96f5b951ef33ee925a5fea45966f1444bef1d1f78c0b09082a74c8519afa"
+build_start_time: [1782949633, 742371082]
+build_end_time: [1782949637, 514998912]
+inputs:
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/AppDelegate.swift": [1782945523, 629267454]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Models/ChatMessage.swift": [1782943970, 536140441]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Models/Conversation.swift": [1782943971, 541072368]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Models/ConversationStore.swift": [1782944082, 128031492]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Models/Settings.swift": [1782949622, 89968681]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Networking/CurlFetcher.swift": [1782944081, 191547870]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Networking/OpenRouterAPI.swift": [1782943969, 543993473]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/ViewControllers/ChatVC.swift": [1782949624, 313981771]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/ViewControllers/ConversationListVC.swift": [1782943975, 925160169]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/ViewControllers/SettingsVC.swift": [1782949623, 231724500]
+  "/Users/srv-admin/Documents/ios6-app/cai/cai/cai/Views/MessageCell.swift": [1782949319, 491460084]

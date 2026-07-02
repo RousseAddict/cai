@@ -1,0 +1,5872 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "CurlFetcher",
+      "printedName": "CurlFetcher",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "defaultUserAgent",
+          "printedName": "defaultUserAgent",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11CurlFetcherC16defaultUserAgentSSvpZ",
+          "mangledName": "$s3cai11CurlFetcherC16defaultUserAgentSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "RawDocComment"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11CurlFetcherC16defaultUserAgentSSvgZ",
+              "mangledName": "$s3cai11CurlFetcherC16defaultUserAgentSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent",
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "fetchData",
+          "printedName": "fetchData(url:timeout:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "hasDefaultArg": true,
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Foundation.Data?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Foundation.Data?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Data",
+                      "printedName": "Foundation.Data",
+                      "usr": "s:10Foundation4DataV"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11CurlFetcherC9fetchData3url7timeout10completionySS_Siy10Foundation0E0VSgctFZ",
+          "mangledName": "$s3cai11CurlFetcherC9fetchData3url7timeout10completionySS_Siy10Foundation0E0VSgctFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Final",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "postJSON",
+          "printedName": "postJSON(url:body:headers:userAgent:timeout:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "hasDefaultArg": true,
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "hasDefaultArg": true,
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Swift.Int, Foundation.Data?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Tuple",
+                  "printedName": "(Swift.Int, Foundation.Data?)",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Int",
+                      "printedName": "Swift.Int",
+                      "usr": "s:Si"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "Foundation.Data?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Data",
+                          "printedName": "Foundation.Data",
+                          "usr": "s:10Foundation4DataV"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11CurlFetcherC8postJSON3url4body7headers9userAgent7timeout10completionySS_SSSaySSGSSSiySi_10Foundation4DataVSgtctFZ",
+          "mangledName": "$s3cai11CurlFetcherC8postJSON3url4body7headers9userAgent7timeout10completionySS_SSSaySSGSSSiySi_10Foundation4DataVSgtctFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Final",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "postJSONStream",
+          "printedName": "postJSONStream(url:body:headers:userAgent:timeout:onChunk:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "hasDefaultArg": true,
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "hasDefaultArg": true,
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Foundation.Data) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Data",
+                  "printedName": "Foundation.Data",
+                  "usr": "s:10Foundation4DataV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Swift.Int, Foundation.Data?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Tuple",
+                  "printedName": "(Swift.Int, Foundation.Data?)",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Int",
+                      "printedName": "Swift.Int",
+                      "usr": "s:Si"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "Foundation.Data?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Data",
+                          "printedName": "Foundation.Data",
+                          "usr": "s:10Foundation4DataV"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11CurlFetcherC14postJSONStream3url4body7headers9userAgent7timeout7onChunk10completionySS_SSSaySSGSSSiy10Foundation4DataVcySi_AOSgtctFZ",
+          "mangledName": "$s3cai11CurlFetcherC14postJSONStream3url4body7headers9userAgent7timeout7onChunk10completionySS_SSSaySSGSSSiy10Foundation4DataVcySi_AOSgtctFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Final",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "downloadToFile",
+          "printedName": "downloadToFile(url:outputPath:progress:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "((Swift.Float) -> ())?",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(Swift.Float) -> ()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Float",
+                      "printedName": "Swift.Float",
+                      "usr": "s:Sf"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Swift.Bool) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11CurlFetcherC14downloadToFile3url10outputPath8progress10completionySS_SSySfcSgySbctFZ",
+          "mangledName": "$s3cai11CurlFetcherC14downloadToFile3url10outputPath8progress10completionySS_SSySfcSgySbctFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Final",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CurlFetcher",
+              "printedName": "cai.CurlFetcher",
+              "usr": "s:3cai11CurlFetcherC"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:3cai11CurlFetcherCACycfc",
+          "mangledName": "$s3cai11CurlFetcherCACycfc",
+          "moduleName": "cai",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:3cai11CurlFetcherC",
+      "mangledName": "$s3cai11CurlFetcherC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "OpenRouterAPI",
+      "printedName": "OpenRouterAPI",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "endpoint",
+          "printedName": "endpoint",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai13OpenRouterAPIO8endpointSSvpZ",
+          "mangledName": "$s3cai13OpenRouterAPIO8endpointSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai13OpenRouterAPIO8endpointSSvgZ",
+              "mangledName": "$s3cai13OpenRouterAPIO8endpointSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "streamChat",
+          "printedName": "streamChat(messages:model:apiKey:onDelta:onDone:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[cai.ChatMessage]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ChatMessage",
+                  "printedName": "cai.ChatMessage",
+                  "usr": "s:3cai11ChatMessageV"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Swift.String) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Swift.String?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai13OpenRouterAPIO10streamChat8messages5model6apiKey7onDelta0K4DoneySayAA0F7MessageVG_S2SySScySSSgctFZ",
+          "mangledName": "$s3cai13OpenRouterAPIO10streamChat8messages5model6apiKey7onDelta0K4DoneySayAA0F7MessageVG_S2SySScySSSgctFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:3cai13OpenRouterAPIO",
+      "mangledName": "$s3cai13OpenRouterAPIO",
+      "moduleName": "cai",
+      "declAttributes": [
+        "RawDocComment"
+      ],
+      "isEnumExhaustive": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SSEParser",
+      "printedName": "SSEParser",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "buffer",
+          "printedName": "buffer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai9SSEParserC6buffer33_EA73C875C1DE371AAA6D040B658A23CALLSSvp",
+          "mangledName": "$s3cai9SSEParserC6buffer33_EA73C875C1DE371AAA6D040B658A23CALLSSvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "consume",
+          "printedName": "consume(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai9SSEParserC7consumeySaySSG10Foundation4DataVF",
+          "mangledName": "$s3cai9SSEParserC7consumeySaySSG10Foundation4DataVF",
+          "moduleName": "cai",
+          "declAttributes": [
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SSEParser",
+              "printedName": "cai.SSEParser",
+              "usr": "s:3cai9SSEParserC"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:3cai9SSEParserCACycfc",
+          "mangledName": "$s3cai9SSEParserCACycfc",
+          "moduleName": "cai",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:3cai9SSEParserC",
+      "mangledName": "$s3cai9SSEParserC",
+      "moduleName": "cai",
+      "declAttributes": [
+        "Final",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ChatMessage",
+      "printedName": "ChatMessage",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "role",
+          "printedName": "role",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11ChatMessageV4roleSSvp",
+          "mangledName": "$s3cai11ChatMessageV4roleSSvp",
+          "moduleName": "cai",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV4roleSSvg",
+              "mangledName": "$s3cai11ChatMessageV4roleSSvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV4roleSSvs",
+              "mangledName": "$s3cai11ChatMessageV4roleSSvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV4roleSSvM",
+              "mangledName": "$s3cai11ChatMessageV4roleSSvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "content",
+          "printedName": "content",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11ChatMessageV7contentSSvp",
+          "mangledName": "$s3cai11ChatMessageV7contentSSvp",
+          "moduleName": "cai",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV7contentSSvg",
+              "mangledName": "$s3cai11ChatMessageV7contentSSvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV7contentSSvs",
+              "mangledName": "$s3cai11ChatMessageV7contentSSvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV7contentSSvM",
+              "mangledName": "$s3cai11ChatMessageV7contentSSvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "roleUser",
+          "printedName": "roleUser",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11ChatMessageV8roleUserSSvpZ",
+          "mangledName": "$s3cai11ChatMessageV8roleUserSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV8roleUserSSvgZ",
+              "mangledName": "$s3cai11ChatMessageV8roleUserSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "roleAssistant",
+          "printedName": "roleAssistant",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11ChatMessageV13roleAssistantSSvpZ",
+          "mangledName": "$s3cai11ChatMessageV13roleAssistantSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV13roleAssistantSSvgZ",
+              "mangledName": "$s3cai11ChatMessageV13roleAssistantSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "roleSystem",
+          "printedName": "roleSystem",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11ChatMessageV10roleSystemSSvpZ",
+          "mangledName": "$s3cai11ChatMessageV10roleSystemSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV10roleSystemSSvgZ",
+              "mangledName": "$s3cai11ChatMessageV10roleSystemSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isUser",
+          "printedName": "isUser",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11ChatMessageV6isUserSbvp",
+          "mangledName": "$s3cai11ChatMessageV6isUserSbvp",
+          "moduleName": "cai",
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11ChatMessageV6isUserSbvg",
+              "mangledName": "$s3cai11ChatMessageV6isUserSbvg",
+              "moduleName": "cai",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "toAPIDict",
+          "printedName": "toAPIDict()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Any]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ProtocolComposition",
+                  "printedName": "Any"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11ChatMessageV9toAPIDictSDySSypGyF",
+          "mangledName": "$s3cai11ChatMessageV9toAPIDictSDySSypGyF",
+          "moduleName": "cai",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "toDict",
+          "printedName": "toDict()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Any]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ProtocolComposition",
+                  "printedName": "Any"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11ChatMessageV6toDictSDySSypGyF",
+          "mangledName": "$s3cai11ChatMessageV6toDictSDySSypGyF",
+          "moduleName": "cai",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "from",
+          "printedName": "from(dict:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "cai.ChatMessage?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ChatMessage",
+                  "printedName": "cai.ChatMessage",
+                  "usr": "s:3cai11ChatMessageV"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Any]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ProtocolComposition",
+                  "printedName": "Any"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11ChatMessageV4from4dictACSgSDySSypG_tFZ",
+          "mangledName": "$s3cai11ChatMessageV4from4dictACSgSDySSypG_tFZ",
+          "moduleName": "cai",
+          "static": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(role:content:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ChatMessage",
+              "printedName": "cai.ChatMessage",
+              "usr": "s:3cai11ChatMessageV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:3cai11ChatMessageV4role7contentACSS_SStcfc",
+          "mangledName": "$s3cai11ChatMessageV4role7contentACSS_SStcfc",
+          "moduleName": "cai",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:3cai11ChatMessageV",
+      "mangledName": "$s3cai11ChatMessageV",
+      "moduleName": "cai",
+      "declAttributes": [
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Conversation",
+      "printedName": "Conversation",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "id",
+          "printedName": "id",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC2idSSvp",
+          "mangledName": "$s3cai12ConversationC2idSSvp",
+          "moduleName": "cai",
+          "declAttributes": [
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC2idSSvg",
+              "mangledName": "$s3cai12ConversationC2idSSvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent",
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "title",
+          "printedName": "title",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC5titleSSvp",
+          "mangledName": "$s3cai12ConversationC5titleSSvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC5titleSSvg",
+              "mangledName": "$s3cai12ConversationC5titleSSvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC5titleSSvs",
+              "mangledName": "$s3cai12ConversationC5titleSSvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC5titleSSvM",
+              "mangledName": "$s3cai12ConversationC5titleSSvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "model",
+          "printedName": "model",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC5modelSSvp",
+          "mangledName": "$s3cai12ConversationC5modelSSvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC5modelSSvg",
+              "mangledName": "$s3cai12ConversationC5modelSSvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC5modelSSvs",
+              "mangledName": "$s3cai12ConversationC5modelSSvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC5modelSSvM",
+              "mangledName": "$s3cai12ConversationC5modelSSvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "messages",
+          "printedName": "messages",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[cai.ChatMessage]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ChatMessage",
+                  "printedName": "cai.ChatMessage",
+                  "usr": "s:3cai11ChatMessageV"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC8messagesSayAA11ChatMessageVGvp",
+          "mangledName": "$s3cai12ConversationC8messagesSayAA11ChatMessageVGvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[cai.ChatMessage]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ChatMessage",
+                      "printedName": "cai.ChatMessage",
+                      "usr": "s:3cai11ChatMessageV"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC8messagesSayAA11ChatMessageVGvg",
+              "mangledName": "$s3cai12ConversationC8messagesSayAA11ChatMessageVGvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[cai.ChatMessage]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ChatMessage",
+                      "printedName": "cai.ChatMessage",
+                      "usr": "s:3cai11ChatMessageV"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC8messagesSayAA11ChatMessageVGvs",
+              "mangledName": "$s3cai12ConversationC8messagesSayAA11ChatMessageVGvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC8messagesSayAA11ChatMessageVGvM",
+              "mangledName": "$s3cai12ConversationC8messagesSayAA11ChatMessageVGvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "createdAt",
+          "printedName": "createdAt",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Double",
+              "printedName": "Swift.Double",
+              "usr": "s:Sd"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC9createdAtSdvp",
+          "mangledName": "$s3cai12ConversationC9createdAtSdvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Double",
+                  "printedName": "Swift.Double",
+                  "usr": "s:Sd"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC9createdAtSdvg",
+              "mangledName": "$s3cai12ConversationC9createdAtSdvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Double",
+                  "printedName": "Swift.Double",
+                  "usr": "s:Sd"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC9createdAtSdvs",
+              "mangledName": "$s3cai12ConversationC9createdAtSdvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC9createdAtSdvM",
+              "mangledName": "$s3cai12ConversationC9createdAtSdvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "updatedAt",
+          "printedName": "updatedAt",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Double",
+              "printedName": "Swift.Double",
+              "usr": "s:Sd"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC9updatedAtSdvp",
+          "mangledName": "$s3cai12ConversationC9updatedAtSdvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Double",
+                  "printedName": "Swift.Double",
+                  "usr": "s:Sd"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC9updatedAtSdvg",
+              "mangledName": "$s3cai12ConversationC9updatedAtSdvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Double",
+                  "printedName": "Swift.Double",
+                  "usr": "s:Sd"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC9updatedAtSdvs",
+              "mangledName": "$s3cai12ConversationC9updatedAtSdvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC9updatedAtSdvM",
+              "mangledName": "$s3cai12ConversationC9updatedAtSdvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(id:title:model:messages:createdAt:updatedAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Conversation",
+              "printedName": "cai.Conversation",
+              "usr": "s:3cai12ConversationC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "hasDefaultArg": true,
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "hasDefaultArg": true,
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[cai.ChatMessage]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ChatMessage",
+                  "printedName": "cai.ChatMessage",
+                  "usr": "s:3cai11ChatMessageV"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Double",
+              "printedName": "Swift.Double",
+              "hasDefaultArg": true,
+              "usr": "s:Sd"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Double",
+              "printedName": "Swift.Double",
+              "hasDefaultArg": true,
+              "usr": "s:Sd"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:3cai12ConversationC2id5title5model8messages9createdAt07updatedH0ACSS_S2SSayAA11ChatMessageVGS2dtcfc",
+          "mangledName": "$s3cai12ConversationC2id5title5model8messages9createdAt07updatedH0ACSS_S2SSayAA11ChatMessageVGS2dtcfc",
+          "moduleName": "cai",
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "lastMessagePreview",
+          "printedName": "lastMessagePreview",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai12ConversationC18lastMessagePreviewSSvp",
+          "mangledName": "$s3cai12ConversationC18lastMessagePreviewSSvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai12ConversationC18lastMessagePreviewSSvg",
+              "mangledName": "$s3cai12ConversationC18lastMessagePreviewSSvg",
+              "moduleName": "cai",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "deriveTitleIfNeeded",
+          "printedName": "deriveTitleIfNeeded()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai12ConversationC19deriveTitleIfNeededyyF",
+          "mangledName": "$s3cai12ConversationC19deriveTitleIfNeededyyF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "toDict",
+          "printedName": "toDict()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Any]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ProtocolComposition",
+                  "printedName": "Any"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai12ConversationC6toDictSDySSypGyF",
+          "mangledName": "$s3cai12ConversationC6toDictSDySSypGyF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "from",
+          "printedName": "from(dict:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "cai.Conversation?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Conversation",
+                  "printedName": "cai.Conversation",
+                  "usr": "s:3cai12ConversationC"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Any]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ProtocolComposition",
+                  "printedName": "Any"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai12ConversationC4from4dictACSgSDySSypG_tFZ",
+          "mangledName": "$s3cai12ConversationC4from4dictACSgSDySSypG_tFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:3cai12ConversationC",
+      "mangledName": "$s3cai12ConversationC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ConversationStore",
+      "printedName": "ConversationStore",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "shared",
+          "printedName": "shared",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ConversationStore",
+              "printedName": "cai.ConversationStore",
+              "usr": "s:3cai17ConversationStoreC"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai17ConversationStoreC6sharedACvpZ",
+          "mangledName": "$s3cai17ConversationStoreC6sharedACvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ConversationStore",
+                  "printedName": "cai.ConversationStore",
+                  "usr": "s:3cai17ConversationStoreC"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai17ConversationStoreC6sharedACvgZ",
+              "mangledName": "$s3cai17ConversationStoreC6sharedACvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent",
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "dir",
+          "printedName": "dir",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai17ConversationStoreC3dir33_DDE695FD9AEABD60E68D998746B21B36LLSSvp",
+          "mangledName": "$s3cai17ConversationStoreC3dir33_DDE695FD9AEABD60E68D998746B21B36LLSSvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "all",
+          "printedName": "all()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[cai.Conversation]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Conversation",
+                  "printedName": "cai.Conversation",
+                  "usr": "s:3cai12ConversationC"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai17ConversationStoreC3allSayAA0B0CGyF",
+          "mangledName": "$s3cai17ConversationStoreC3allSayAA0B0CGyF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "save",
+          "printedName": "save(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Conversation",
+              "printedName": "cai.Conversation",
+              "usr": "s:3cai12ConversationC"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai17ConversationStoreC4saveyyAA0B0CF",
+          "mangledName": "$s3cai17ConversationStoreC4saveyyAA0B0CF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "delete",
+          "printedName": "delete(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Conversation",
+              "printedName": "cai.Conversation",
+              "usr": "s:3cai12ConversationC"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai17ConversationStoreC6deleteyyAA0B0CF",
+          "mangledName": "$s3cai17ConversationStoreC6deleteyyAA0B0CF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:3cai17ConversationStoreC",
+      "mangledName": "$s3cai17ConversationStoreC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Settings",
+      "printedName": "Settings",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "fallbackModel",
+          "printedName": "fallbackModel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai8SettingsO13fallbackModelSSvpZ",
+          "mangledName": "$s3cai8SettingsO13fallbackModelSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "RawDocComment"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO13fallbackModelSSvgZ",
+              "mangledName": "$s3cai8SettingsO13fallbackModelSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "apiKey",
+          "printedName": "apiKey",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai8SettingsO6apiKeySSvpZ",
+          "mangledName": "$s3cai8SettingsO6apiKeySSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO6apiKeySSvgZ",
+              "mangledName": "$s3cai8SettingsO6apiKeySSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO6apiKeySSvsZ",
+              "mangledName": "$s3cai8SettingsO6apiKeySSvsZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO6apiKeySSvMZ",
+              "mangledName": "$s3cai8SettingsO6apiKeySSvMZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "defaultModel",
+          "printedName": "defaultModel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai8SettingsO12defaultModelSSvpZ",
+          "mangledName": "$s3cai8SettingsO12defaultModelSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO12defaultModelSSvgZ",
+              "mangledName": "$s3cai8SettingsO12defaultModelSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO12defaultModelSSvsZ",
+              "mangledName": "$s3cai8SettingsO12defaultModelSSvsZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO12defaultModelSSvMZ",
+              "mangledName": "$s3cai8SettingsO12defaultModelSSvMZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "systemPrompt",
+          "printedName": "systemPrompt",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai8SettingsO12systemPromptSSvpZ",
+          "mangledName": "$s3cai8SettingsO12systemPromptSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO12systemPromptSSvgZ",
+              "mangledName": "$s3cai8SettingsO12systemPromptSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO12systemPromptSSvsZ",
+              "mangledName": "$s3cai8SettingsO12systemPromptSSvsZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO12systemPromptSSvMZ",
+              "mangledName": "$s3cai8SettingsO12systemPromptSSvMZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "hasAPIKey",
+          "printedName": "hasAPIKey",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai8SettingsO9hasAPIKeySbvpZ",
+          "mangledName": "$s3cai8SettingsO9hasAPIKeySbvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai8SettingsO9hasAPIKeySbvgZ",
+              "mangledName": "$s3cai8SettingsO9hasAPIKeySbvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:3cai8SettingsO",
+      "mangledName": "$s3cai8SettingsO",
+      "moduleName": "cai",
+      "declAttributes": [
+        "RawDocComment"
+      ],
+      "isEnumExhaustive": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "MessageCell",
+      "printedName": "MessageCell",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "reuseID",
+          "printedName": "reuseID",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11MessageCellC7reuseIDSSvpZ",
+          "mangledName": "$s3cai11MessageCellC7reuseIDSSvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11MessageCellC7reuseIDSSvgZ",
+              "mangledName": "$s3cai11MessageCellC7reuseIDSSvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "font",
+          "printedName": "font",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIFont",
+              "printedName": "UIKit.UIFont",
+              "usr": "c:objc(cs)UIFont"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11MessageCellC4fontSo6UIFontCvpZ",
+          "mangledName": "$s3cai11MessageCellC4fontSo6UIFontCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIFont",
+                  "printedName": "UIKit.UIFont",
+                  "usr": "c:objc(cs)UIFont"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11MessageCellC4fontSo6UIFontCvgZ",
+              "mangledName": "$s3cai11MessageCellC4fontSo6UIFontCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "bubble",
+          "printedName": "bubble",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIView",
+              "printedName": "UIKit.UIView",
+              "usr": "c:objc(cs)UIView"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11MessageCellC6bubble33_E005CE1F8C108CB092444B2E7140752DLLSo6UIViewCvp",
+          "mangledName": "$s3cai11MessageCellC6bubble33_E005CE1F8C108CB092444B2E7140752DLLSo6UIViewCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "label",
+          "printedName": "label",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UILabel",
+              "printedName": "UIKit.UILabel",
+              "usr": "c:objc(cs)UILabel"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11MessageCellC5label33_E005CE1F8C108CB092444B2E7140752DLLSo7UILabelCvp",
+          "mangledName": "$s3cai11MessageCellC5label33_E005CE1F8C108CB092444B2E7140752DLLSo7UILabelCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 1,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(style:reuseIdentifier:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "MessageCell",
+              "printedName": "cai.MessageCell",
+              "usr": "c:@M@cai@objc(cs)MessageCell"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CellStyle",
+              "printedName": "UIKit.UITableViewCell.CellStyle",
+              "usr": "c:@E@UITableViewCellStyle"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)MessageCell(im)initWithStyle:reuseIdentifier:",
+          "mangledName": "$s3cai11MessageCellC5style15reuseIdentifierACSo011UITableViewC5StyleV_SSSgtcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "objc_name": "initWithStyle:reuseIdentifier:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(coder:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "cai.MessageCell?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "MessageCell",
+                  "printedName": "cai.MessageCell",
+                  "usr": "c:@M@cai@objc(cs)MessageCell"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "NSCoder",
+              "printedName": "Foundation.NSCoder",
+              "usr": "c:objc(cs)NSCoder"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)MessageCell(im)initWithCoder:",
+          "mangledName": "$s3cai11MessageCellC5coderACSgSo7NSCoderC_tcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "objc_name": "initWithCoder:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Required"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "isUser",
+          "printedName": "isUser",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai11MessageCellC6isUser33_E005CE1F8C108CB092444B2E7140752DLLSbvp",
+          "mangledName": "$s3cai11MessageCellC6isUser33_E005CE1F8C108CB092444B2E7140752DLLSbvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "configure",
+          "printedName": "configure(with:showCaret:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "ChatMessage",
+              "printedName": "cai.ChatMessage",
+              "usr": "s:3cai11ChatMessageV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "hasDefaultArg": true,
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11MessageCellC9configure4with9showCaretyAA04ChatB0V_SbtF",
+          "mangledName": "$s3cai11MessageCellC9configure4with9showCaretyAA04ChatB0V_SbtF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "layoutSubviews",
+          "printedName": "layoutSubviews()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)MessageCell(im)layoutSubviews",
+          "mangledName": "$s3cai11MessageCellC14layoutSubviewsyyF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "layoutSubviews",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "height",
+          "printedName": "height(for:cellWidth:showCaret:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "ChatMessage",
+              "printedName": "cai.ChatMessage",
+              "usr": "s:3cai11ChatMessageV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "hasDefaultArg": true,
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:3cai11MessageCellC6height3for9cellWidth9showCaret12CoreGraphics7CGFloatVAA04ChatB0V_AJSbtFZ",
+          "mangledName": "$s3cai11MessageCellC6height3for9cellWidth9showCaret12CoreGraphics7CGFloatVAA04ChatB0V_AJSbtFZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@cai@objc(cs)MessageCell",
+      "mangledName": "$s3cai11MessageCellC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "Custom",
+        "RawDocComment",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)UITableViewCell",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "UIKit.UITableViewCell",
+        "UIKit.UIView",
+        "UIKit.UIResponder",
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "__DefaultCustomPlaygroundQuickLookable",
+          "printedName": "__DefaultCustomPlaygroundQuickLookable",
+          "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+          "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ConversationListVC",
+      "printedName": "ConversationListVC",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "conversations",
+          "printedName": "conversations",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[cai.Conversation]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Conversation",
+                  "printedName": "cai.Conversation",
+                  "usr": "s:3cai12ConversationC"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai18ConversationListVCC13conversations33_C19A5F1BE53FE1080ED2F6385D9524C3LLSayAA0B0CGvp",
+          "mangledName": "$s3cai18ConversationListVCC13conversations33_C19A5F1BE53FE1080ED2F6385D9524C3LLSayAA0B0CGvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidLoad",
+          "printedName": "viewDidLoad()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)viewDidLoad",
+          "mangledName": "$s3cai18ConversationListVCC11viewDidLoadyyF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidLoad",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewWillAppear",
+          "printedName": "viewWillAppear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)viewWillAppear:",
+          "mangledName": "$s3cai18ConversationListVCC14viewWillAppearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewWillAppear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:numberOfRowsInSection:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)tableView:numberOfRowsInSection:",
+          "mangledName": "$s3cai18ConversationListVCC9tableView_21numberOfRowsInSectionSiSo07UITableF0C_SitF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "tableView:numberOfRowsInSection:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:cellForRowAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITableViewCell",
+              "printedName": "UIKit.UITableViewCell",
+              "usr": "c:objc(cs)UITableViewCell"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "IndexPath",
+              "printedName": "Foundation.IndexPath",
+              "usr": "s:10Foundation9IndexPathV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)tableView:cellForRowAtIndexPath:",
+          "mangledName": "$s3cai18ConversationListVCC9tableView_12cellForRowAtSo07UITableF4CellCSo0kF0C_10Foundation9IndexPathVtF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "tableView:cellForRowAtIndexPath:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:didSelectRowAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "IndexPath",
+              "printedName": "Foundation.IndexPath",
+              "usr": "s:10Foundation9IndexPathV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)tableView:didSelectRowAtIndexPath:",
+          "mangledName": "$s3cai18ConversationListVCC9tableView_14didSelectRowAtySo07UITableF0C_10Foundation9IndexPathVtF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "tableView:didSelectRowAtIndexPath:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:canEditRowAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "IndexPath",
+              "printedName": "Foundation.IndexPath",
+              "usr": "s:10Foundation9IndexPathV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)tableView:canEditRowAtIndexPath:",
+          "mangledName": "$s3cai18ConversationListVCC9tableView_12canEditRowAtSbSo07UITableF0C_10Foundation9IndexPathVtF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "tableView:canEditRowAtIndexPath:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:commit:forRowAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EditingStyle",
+              "printedName": "UIKit.UITableViewCell.EditingStyle",
+              "usr": "c:@E@UITableViewCellEditingStyle"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "IndexPath",
+              "printedName": "Foundation.IndexPath",
+              "usr": "s:10Foundation9IndexPathV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)tableView:commitEditingStyle:forRowAtIndexPath:",
+          "mangledName": "$s3cai18ConversationListVCC9tableView_6commit8forRowAtySo07UITableF0C_So0kF16CellEditingStyleV10Foundation9IndexPathVtF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "tableView:commitEditingStyle:forRowAtIndexPath:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(style:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ConversationListVC",
+              "printedName": "cai.ConversationListVC",
+              "usr": "c:@M@cai@objc(cs)ConversationListVC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Style",
+              "printedName": "UIKit.UITableView.Style",
+              "usr": "c:@E@UITableViewStyle"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)initWithStyle:",
+          "mangledName": "$s3cai18ConversationListVCC5styleACSo16UITableViewStyleV_tcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "initWithStyle:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(nibName:bundle:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ConversationListVC",
+              "printedName": "cai.ConversationListVC",
+              "usr": "c:@M@cai@objc(cs)ConversationListVC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.Bundle?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bundle",
+                  "printedName": "Foundation.Bundle",
+                  "usr": "c:objc(cs)NSBundle"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)initWithNibName:bundle:",
+          "mangledName": "$s3cai18ConversationListVCC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "initWithNibName:bundle:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(coder:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "cai.ConversationListVC?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ConversationListVC",
+                  "printedName": "cai.ConversationListVC",
+                  "usr": "c:@M@cai@objc(cs)ConversationListVC"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "NSCoder",
+              "printedName": "Foundation.NSCoder",
+              "usr": "c:objc(cs)NSCoder"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)ConversationListVC(im)initWithCoder:",
+          "mangledName": "$s3cai18ConversationListVCC5coderACSgSo7NSCoderC_tcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "initWithCoder:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Required"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@cai@objc(cs)ConversationListVC",
+      "mangledName": "$s3cai18ConversationListVCC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "Custom",
+        "RawDocComment",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)UITableViewController",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "UIKit.UITableViewController",
+        "UIKit.UIViewController",
+        "UIKit.UIResponder",
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ChatVC",
+      "printedName": "ChatVC",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "conversation",
+          "printedName": "conversation",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Conversation",
+              "printedName": "cai.Conversation",
+              "usr": "s:3cai12ConversationC"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC12conversation33_8E73A3CD11FCCC384B93246CECA6F8C1LLAA12ConversationCvp",
+          "mangledName": "$s3cai6ChatVCC12conversation33_8E73A3CD11FCCC384B93246CECA6F8C1LLAA12ConversationCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "tableView",
+          "printedName": "tableView",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC9tableView33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo07UITableE0Cvp",
+          "mangledName": "$s3cai6ChatVCC9tableView33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo07UITableE0Cvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 1,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "inputBar",
+          "printedName": "inputBar",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIView",
+              "printedName": "UIKit.UIView",
+              "usr": "c:objc(cs)UIView"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC8inputBar33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo6UIViewCvp",
+          "mangledName": "$s3cai6ChatVCC8inputBar33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo6UIViewCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 2,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "textField",
+          "printedName": "textField",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITextField",
+              "printedName": "UIKit.UITextField",
+              "usr": "c:objc(cs)UITextField"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC9textField33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo06UITextE0Cvp",
+          "mangledName": "$s3cai6ChatVCC9textField33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo06UITextE0Cvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 3,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "sendButton",
+          "printedName": "sendButton",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIButton",
+              "printedName": "UIKit.UIButton",
+              "usr": "c:objc(cs)UIButton"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC10sendButton33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo8UIButtonCvp",
+          "mangledName": "$s3cai6ChatVCC10sendButton33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo8UIButtonCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 4,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "loadingSpinner",
+          "printedName": "loadingSpinner",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIActivityIndicatorView",
+              "printedName": "UIKit.UIActivityIndicatorView",
+              "usr": "c:objc(cs)UIActivityIndicatorView"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC14loadingSpinner33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo23UIActivityIndicatorViewCvp",
+          "mangledName": "$s3cai6ChatVCC14loadingSpinner33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo23UIActivityIndicatorViewCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 5,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "keyboardHeight",
+          "printedName": "keyboardHeight",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC14keyboardHeight33_8E73A3CD11FCCC384B93246CECA6F8C1LL12CoreGraphics7CGFloatVvp",
+          "mangledName": "$s3cai6ChatVCC14keyboardHeight33_8E73A3CD11FCCC384B93246CECA6F8C1LL12CoreGraphics7CGFloatVvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "isStreaming",
+          "printedName": "isStreaming",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC11isStreaming33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "mangledName": "$s3cai6ChatVCC11isStreaming33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 7,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "didSetup",
+          "printedName": "didSetup",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC8didSetup33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "mangledName": "$s3cai6ChatVCC8didSetup33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 8,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "caretVisible",
+          "printedName": "caretVisible",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC12caretVisible33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "mangledName": "$s3cai6ChatVCC12caretVisible33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 9,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "caretTimer",
+          "printedName": "caretTimer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.Timer?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Timer",
+                  "printedName": "Foundation.Timer",
+                  "usr": "c:objc(cs)NSTimer"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC10caretTimer33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo7NSTimerCSgvp",
+          "mangledName": "$s3cai6ChatVCC10caretTimer33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo7NSTimerCSgvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 10,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "refreshTimer",
+          "printedName": "refreshTimer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.Timer?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Timer",
+                  "printedName": "Foundation.Timer",
+                  "usr": "c:objc(cs)NSTimer"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC12refreshTimer33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo7NSTimerCSgvp",
+          "mangledName": "$s3cai6ChatVCC12refreshTimer33_8E73A3CD11FCCC384B93246CECA6F8C1LLSo7NSTimerCSgvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 11,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "pendingRender",
+          "printedName": "pendingRender",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai6ChatVCC13pendingRender33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "mangledName": "$s3cai6ChatVCC13pendingRender33_8E73A3CD11FCCC384B93246CECA6F8C1LLSbvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 12,
+          "hasStorage": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(conversation:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ChatVC",
+              "printedName": "cai.ChatVC",
+              "usr": "c:@M@cai@objc(cs)ChatVC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Conversation",
+              "printedName": "cai.Conversation",
+              "usr": "s:3cai12ConversationC"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:3cai6ChatVCC12conversationAcA12ConversationC_tcfc",
+          "mangledName": "$s3cai6ChatVCC12conversationAcA12ConversationC_tcfc",
+          "moduleName": "cai",
+          "declAttributes": [
+            "Custom"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(coder:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "cai.ChatVC?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ChatVC",
+                  "printedName": "cai.ChatVC",
+                  "usr": "c:@M@cai@objc(cs)ChatVC"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "NSCoder",
+              "printedName": "Foundation.NSCoder",
+              "usr": "c:objc(cs)NSCoder"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)initWithCoder:",
+          "mangledName": "$s3cai6ChatVCC5coderACSgSo7NSCoderC_tcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "objc_name": "initWithCoder:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Required"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidLoad",
+          "printedName": "viewDidLoad()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)viewDidLoad",
+          "mangledName": "$s3cai6ChatVCC11viewDidLoadyyF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidLoad",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewWillAppear",
+          "printedName": "viewWillAppear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)viewWillAppear:",
+          "mangledName": "$s3cai6ChatVCC14viewWillAppearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewWillAppear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewWillDisappear",
+          "printedName": "viewWillDisappear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)viewWillDisappear:",
+          "mangledName": "$s3cai6ChatVCC17viewWillDisappearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewWillDisappear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidAppear",
+          "printedName": "viewDidAppear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)viewDidAppear:",
+          "mangledName": "$s3cai6ChatVCC13viewDidAppearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidAppear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidLayoutSubviews",
+          "printedName": "viewDidLayoutSubviews()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)viewDidLayoutSubviews",
+          "mangledName": "$s3cai6ChatVCC21viewDidLayoutSubviewsyyF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidLayoutSubviews",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "alertView",
+          "printedName": "alertView(_:clickedButtonAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIAlertView",
+              "printedName": "UIKit.UIAlertView",
+              "usr": "c:objc(cs)UIAlertView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)alertView:clickedButtonAtIndex:",
+          "mangledName": "$s3cai6ChatVCC9alertView_15clickedButtonAtySo07UIAlertE0C_SitF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "alertView:clickedButtonAtIndex:",
+          "declAttributes": [
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:numberOfRowsInSection:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)tableView:numberOfRowsInSection:",
+          "mangledName": "$s3cai6ChatVCC9tableView_21numberOfRowsInSectionSiSo07UITableE0C_SitF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "tableView:numberOfRowsInSection:",
+          "declAttributes": [
+            "ObjC",
+            "Custom",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:cellForRowAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITableViewCell",
+              "printedName": "UIKit.UITableViewCell",
+              "usr": "c:objc(cs)UITableViewCell"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "IndexPath",
+              "printedName": "Foundation.IndexPath",
+              "usr": "s:10Foundation9IndexPathV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)tableView:cellForRowAtIndexPath:",
+          "mangledName": "$s3cai6ChatVCC9tableView_12cellForRowAtSo07UITableE4CellCSo0jE0C_10Foundation9IndexPathVtF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "tableView:cellForRowAtIndexPath:",
+          "declAttributes": [
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "tableView",
+          "printedName": "tableView(_:heightForRowAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITableView",
+              "printedName": "UIKit.UITableView",
+              "usr": "c:objc(cs)UITableView"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "IndexPath",
+              "printedName": "Foundation.IndexPath",
+              "usr": "s:10Foundation9IndexPathV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)tableView:heightForRowAtIndexPath:",
+          "mangledName": "$s3cai6ChatVCC9tableView_14heightForRowAt12CoreGraphics7CGFloatVSo07UITableE0C_10Foundation9IndexPathVtF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "tableView:heightForRowAtIndexPath:",
+          "declAttributes": [
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "textFieldShouldReturn",
+          "printedName": "textFieldShouldReturn(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITextField",
+              "printedName": "UIKit.UITextField",
+              "usr": "c:objc(cs)UITextField"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)textFieldShouldReturn:",
+          "mangledName": "$s3cai6ChatVCC21textFieldShouldReturnySbSo06UITextE0CF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "textFieldShouldReturn:",
+          "declAttributes": [
+            "ObjC",
+            "Custom",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(nibName:bundle:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ChatVC",
+              "printedName": "cai.ChatVC",
+              "usr": "c:@M@cai@objc(cs)ChatVC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.Bundle?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bundle",
+                  "printedName": "Foundation.Bundle",
+                  "usr": "c:objc(cs)NSBundle"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)ChatVC(im)initWithNibName:bundle:",
+          "mangledName": "$s3cai6ChatVCC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "initWithNibName:bundle:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@cai@objc(cs)ChatVC",
+      "mangledName": "$s3cai6ChatVCC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "Custom",
+        "RawDocComment",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)UIViewController",
+      "superclassNames": [
+        "UIKit.UIViewController",
+        "UIKit.UIResponder",
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SettingsVC",
+      "printedName": "SettingsVC",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "scrollView",
+          "printedName": "scrollView",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIScrollView",
+              "printedName": "UIKit.UIScrollView",
+              "usr": "c:objc(cs)UIScrollView"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC10scrollView33_7E72B9B158FC58D5D1124621DB7C311DLLSo08UIScrollE0Cvp",
+          "mangledName": "$s3cai10SettingsVCC10scrollView33_7E72B9B158FC58D5D1124621DB7C311DLLSo08UIScrollE0Cvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "keyLabel",
+          "printedName": "keyLabel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UILabel",
+              "printedName": "UIKit.UILabel",
+              "usr": "c:objc(cs)UILabel"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC8keyLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "mangledName": "$s3cai10SettingsVCC8keyLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 1,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "keyField",
+          "printedName": "keyField",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITextField",
+              "printedName": "UIKit.UITextField",
+              "usr": "c:objc(cs)UITextField"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC8keyField33_7E72B9B158FC58D5D1124621DB7C311DLLSo06UITextE0Cvp",
+          "mangledName": "$s3cai10SettingsVCC8keyField33_7E72B9B158FC58D5D1124621DB7C311DLLSo06UITextE0Cvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 2,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "modelLabel",
+          "printedName": "modelLabel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UILabel",
+              "printedName": "UIKit.UILabel",
+              "usr": "c:objc(cs)UILabel"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC10modelLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "mangledName": "$s3cai10SettingsVCC10modelLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 3,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "modelField",
+          "printedName": "modelField",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITextField",
+              "printedName": "UIKit.UITextField",
+              "usr": "c:objc(cs)UITextField"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC10modelField33_7E72B9B158FC58D5D1124621DB7C311DLLSo06UITextE0Cvp",
+          "mangledName": "$s3cai10SettingsVCC10modelField33_7E72B9B158FC58D5D1124621DB7C311DLLSo06UITextE0Cvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 4,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "promptLabel",
+          "printedName": "promptLabel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UILabel",
+              "printedName": "UIKit.UILabel",
+              "usr": "c:objc(cs)UILabel"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC11promptLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "mangledName": "$s3cai10SettingsVCC11promptLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 5,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "promptView",
+          "printedName": "promptView",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UITextView",
+              "printedName": "UIKit.UITextView",
+              "usr": "c:objc(cs)UITextView"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC10promptView33_7E72B9B158FC58D5D1124621DB7C311DLLSo06UITextE0Cvp",
+          "mangledName": "$s3cai10SettingsVCC10promptView33_7E72B9B158FC58D5D1124621DB7C311DLLSo06UITextE0Cvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 6,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "noteLabel",
+          "printedName": "noteLabel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UILabel",
+              "printedName": "UIKit.UILabel",
+              "usr": "c:objc(cs)UILabel"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC9noteLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "mangledName": "$s3cai10SettingsVCC9noteLabel33_7E72B9B158FC58D5D1124621DB7C311DLLSo7UILabelCvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 7,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "keyboardHeight",
+          "printedName": "keyboardHeight",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC14keyboardHeight33_7E72B9B158FC58D5D1124621DB7C311DLL12CoreGraphics7CGFloatVvp",
+          "mangledName": "$s3cai10SettingsVCC14keyboardHeight33_7E72B9B158FC58D5D1124621DB7C311DLL12CoreGraphics7CGFloatVvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 8,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "didSetup",
+          "printedName": "didSetup",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai10SettingsVCC8didSetup33_7E72B9B158FC58D5D1124621DB7C311DLLSbvp",
+          "mangledName": "$s3cai10SettingsVCC8didSetup33_7E72B9B158FC58D5D1124621DB7C311DLLSbvp",
+          "moduleName": "cai",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "fixedbinaryorder": 9,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidLoad",
+          "printedName": "viewDidLoad()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)viewDidLoad",
+          "mangledName": "$s3cai10SettingsVCC11viewDidLoadyyF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidLoad",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewWillAppear",
+          "printedName": "viewWillAppear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)viewWillAppear:",
+          "mangledName": "$s3cai10SettingsVCC14viewWillAppearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewWillAppear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewWillDisappear",
+          "printedName": "viewWillDisappear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)viewWillDisappear:",
+          "mangledName": "$s3cai10SettingsVCC17viewWillDisappearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewWillDisappear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidAppear",
+          "printedName": "viewDidAppear(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)viewDidAppear:",
+          "mangledName": "$s3cai10SettingsVCC13viewDidAppearyySbF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidAppear:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "viewDidLayoutSubviews",
+          "printedName": "viewDidLayoutSubviews()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)viewDidLayoutSubviews",
+          "mangledName": "$s3cai10SettingsVCC21viewDidLayoutSubviewsyyF",
+          "moduleName": "cai",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "viewDidLayoutSubviews",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "textFieldShouldReturn",
+          "printedName": "textFieldShouldReturn(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UITextField",
+              "printedName": "UIKit.UITextField",
+              "usr": "c:objc(cs)UITextField"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)textFieldShouldReturn:",
+          "mangledName": "$s3cai10SettingsVCC21textFieldShouldReturnySbSo06UITextE0CF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "textFieldShouldReturn:",
+          "declAttributes": [
+            "ObjC",
+            "Custom",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(nibName:bundle:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SettingsVC",
+              "printedName": "cai.SettingsVC",
+              "usr": "c:@M@cai@objc(cs)SettingsVC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.Bundle?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bundle",
+                  "printedName": "Foundation.Bundle",
+                  "usr": "c:objc(cs)NSBundle"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)initWithNibName:bundle:",
+          "mangledName": "$s3cai10SettingsVCC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "initWithNibName:bundle:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(coder:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "cai.SettingsVC?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "SettingsVC",
+                  "printedName": "cai.SettingsVC",
+                  "usr": "c:@M@cai@objc(cs)SettingsVC"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "NSCoder",
+              "printedName": "Foundation.NSCoder",
+              "usr": "c:objc(cs)NSCoder"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)SettingsVC(im)initWithCoder:",
+          "mangledName": "$s3cai10SettingsVCC5coderACSgSo7NSCoderC_tcfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "initWithCoder:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Required"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@cai@objc(cs)SettingsVC",
+      "mangledName": "$s3cai10SettingsVCC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "Custom",
+        "RawDocComment",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)UIViewController",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "UIKit.UIViewController",
+        "UIKit.UIResponder",
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "cai"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "AppDelegate",
+      "printedName": "AppDelegate",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "window",
+          "printedName": "window",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "UIKit.UIWindow?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIWindow",
+                  "printedName": "UIKit.UIWindow",
+                  "usr": "c:objc(cs)UIWindow"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "c:@M@cai@objc(cs)AppDelegate(py)window",
+          "mangledName": "$s3cai11AppDelegateC6windowSo8UIWindowCSgvp",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "window",
+          "declAttributes": [
+            "HasInitialValue",
+            "ObjC",
+            "Custom",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "UIKit.UIWindow?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UIWindow",
+                      "printedName": "UIKit.UIWindow",
+                      "usr": "c:objc(cs)UIWindow"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "c:@M@cai@objc(cs)AppDelegate(im)window",
+              "mangledName": "$s3cai11AppDelegateC6windowSo8UIWindowCSgvg",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "objc_name": "window",
+              "declAttributes": [
+                "ObjC"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "UIKit.UIWindow?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UIWindow",
+                      "printedName": "UIKit.UIWindow",
+                      "usr": "c:objc(cs)UIWindow"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "c:@M@cai@objc(cs)AppDelegate(im)setWindow:",
+              "mangledName": "$s3cai11AppDelegateC6windowSo8UIWindowCSgvs",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "objc_name": "setWindow:",
+              "declAttributes": [
+                "ObjC"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai11AppDelegateC6windowSo8UIWindowCSgvM",
+              "mangledName": "$s3cai11AppDelegateC6windowSo8UIWindowCSgvM",
+              "moduleName": "cai",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "application",
+          "printedName": "application(_:didFinishLaunchingWithOptions:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIApplication",
+              "printedName": "UIKit.UIApplication",
+              "usr": "c:objc(cs)UIApplication"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[UIKit.UIApplication.LaunchOptionsKey : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[UIKit.UIApplication.LaunchOptionsKey : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "LaunchOptionsKey",
+                      "printedName": "UIKit.UIApplication.LaunchOptionsKey",
+                      "usr": "c:@T@UIApplicationLaunchOptionsKey"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@cai@objc(cs)AppDelegate(im)application:didFinishLaunchingWithOptions:",
+          "mangledName": "$s3cai11AppDelegateC11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtF",
+          "moduleName": "cai",
+          "isOpen": true,
+          "objc_name": "application:didFinishLaunchingWithOptions:",
+          "declAttributes": [
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AppDelegate",
+              "printedName": "cai.AppDelegate",
+              "usr": "c:@M@cai@objc(cs)AppDelegate"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@cai@objc(cs)AppDelegate(im)init",
+          "mangledName": "$s3cai11AppDelegateCACycfc",
+          "moduleName": "cai",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@cai@objc(cs)AppDelegate",
+      "mangledName": "$s3cai11AppDelegateC",
+      "moduleName": "cai",
+      "isOpen": true,
+      "declAttributes": [
+        "Custom",
+        "UIApplicationMain",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)UIResponder",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "UIKit.UIResponder",
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Theme",
+      "printedName": "Theme",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "background",
+          "printedName": "background",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO10backgroundSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO10backgroundSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO10backgroundSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO10backgroundSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "rowBackground",
+          "printedName": "rowBackground",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO13rowBackgroundSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO13rowBackgroundSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO13rowBackgroundSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO13rowBackgroundSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "inputBackground",
+          "printedName": "inputBackground",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO15inputBackgroundSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO15inputBackgroundSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO15inputBackgroundSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO15inputBackgroundSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "fieldBackground",
+          "printedName": "fieldBackground",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO15fieldBackgroundSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO15fieldBackgroundSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO15fieldBackgroundSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO15fieldBackgroundSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "userBubble",
+          "printedName": "userBubble",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO10userBubbleSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO10userBubbleSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO10userBubbleSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO10userBubbleSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "assistantBubble",
+          "printedName": "assistantBubble",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO15assistantBubbleSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO15assistantBubbleSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO15assistantBubbleSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO15assistantBubbleSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "accent",
+          "printedName": "accent",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO6accentSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO6accentSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO6accentSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO6accentSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "primaryText",
+          "printedName": "primaryText",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO11primaryTextSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO11primaryTextSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO11primaryTextSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO11primaryTextSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "secondaryText",
+          "printedName": "secondaryText",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UIColor",
+              "printedName": "UIKit.UIColor",
+              "usr": "c:objc(cs)UIColor"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:3cai5ThemeO13secondaryTextSo7UIColorCvpZ",
+          "mangledName": "$s3cai5ThemeO13secondaryTextSo7UIColorCvpZ",
+          "moduleName": "cai",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UIColor",
+                  "printedName": "UIKit.UIColor",
+                  "usr": "c:objc(cs)UIColor"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:3cai5ThemeO13secondaryTextSo7UIColorCvgZ",
+              "mangledName": "$s3cai5ThemeO13secondaryTextSo7UIColorCvgZ",
+              "moduleName": "cai",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:3cai5ThemeO",
+      "mangledName": "$s3cai5ThemeO",
+      "moduleName": "cai",
+      "declAttributes": [
+        "RawDocComment"
+      ],
+      "isEnumExhaustive": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}
