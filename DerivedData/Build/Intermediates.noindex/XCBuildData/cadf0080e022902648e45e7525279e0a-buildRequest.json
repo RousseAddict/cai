@@ -1,0 +1,75 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "3aae7f7dfbfa06833c4b2aca3b9ddbf56585ab44047e7179f3227ae6d1cbda2c"
+    }
+  ],
+  "containerPath" : "/Users/srv-admin/Documents/ios6-app/cai/cai/cai.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64e",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos15.2",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "armv4t",
+        "armv5",
+        "armv6",
+        "armv7",
+        "armv7f",
+        "armv7s",
+        "armv7k",
+        "arm64",
+        "arm64e"
+      ],
+      "targetArchitecture" : "arm64e"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/srv-admin/Documents/ios6-app/cai/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/srv-admin/Documents/ios6-app/cai/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/srv-admin/Documents/ios6-app/cai/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/srv-admin/Documents/ios6-app/cai/DerivedData/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/srv-admin/Documents/ios6-app/cai/DerivedData/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/srv-admin/Documents/ios6-app/cai/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "CODE_SIGN_IDENTITY" : "",
+          "CODE_SIGNING_ALLOWED" : "NO",
+          "CODE_SIGNING_REQUIRED" : "NO",
+          "SDKROOT" : "iphoneos15.2",
+          "TOOLCHAINS" : "org.swift.563202208261a"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      },
+      "toolchainOverride" : "org.swift.563202208261a"
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

@@ -6,6 +6,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Trap crashes as early as possible so the very first launch is covered too.
+        CrashReporter.install()
+
         let win = UIWindow(frame: UIScreen.main.bounds)
         win.backgroundColor = Theme.background
 
@@ -17,17 +20,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // nudge it up so a title-only tab reads centered.
         chatNav.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -14)
 
+        // Tab 2: Remote control (SSH host list -> tmux sessions).
+        let remoteNav = UINavigationController(rootViewController: HostsListVC())
+        remoteNav.navigationBar.barStyle = .black
+        remoteNav.tabBarItem = UITabBarItem(title: "Remote", image: nil, tag: 1)
+        remoteNav.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -14)
+
         let tabs = UITabBarController()
         // UITabBar.barStyle is iOS 7+ — sending it on iOS 6 is an unrecognized selector
         // (crash at launch). iOS 6 tab bars are dark by default, so skipping it is fine.
         if tabs.tabBar.responds(to: #selector(setter: UITabBar.barStyle)) {
             tabs.tabBar.barStyle = .black
         }
-        tabs.viewControllers = [chatNav]
+        tabs.viewControllers = [chatNav, remoteNav]
 
         win.rootViewController = tabs
         win.makeKeyAndVisible()
         window = win
+
+        // If the previous run crashed, pop the debug box with a Copy button.
+        CrashReporter.presentIfNeeded(from: tabs)
         return true
     }
 }

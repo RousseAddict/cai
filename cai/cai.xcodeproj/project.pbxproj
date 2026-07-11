@@ -17,15 +17,25 @@
 		BB000001000000000000BC03 /* curl_bridge.c in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB03 /* curl_bridge.c */; };
 		BB000001000000000000BC04 /* atomic_stubs.c in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB04 /* atomic_stubs.c */; settings = {COMPILER_FLAGS = "-fno-builtin"; }; };
 		BB000001000000000000BC05 /* atomic_stubs.S in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB05 /* atomic_stubs.S */; };
+		BB000001000000000000BC06 /* compat_shims.c in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB06 /* compat_shims.c */; settings = {COMPILER_FLAGS = "-fno-builtin"; }; };
 		BB000001000000000000BC20 /* OpenRouterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB20 /* OpenRouterAPI.swift */; };
+		BB000001000000000000BC29 /* SSHClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB29 /* SSHClient.swift */; };
 		BB000001000000000000BC21 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB21 /* ChatMessage.swift */; };
 		BB000001000000000000BC22 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB22 /* Conversation.swift */; };
 		BB000001000000000000BC23 /* ConversationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB23 /* ConversationStore.swift */; };
 		BB000001000000000000BC24 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB24 /* Settings.swift */; };
+		BB000001000000000000BC30 /* RemoteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB30 /* RemoteHost.swift */; };
+		BB000001000000000000BC31 /* RemoteHostStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB31 /* RemoteHostStore.swift */; };
+		BB000001000000000000BC32 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB32 /* Keychain.swift */; };
+		BB000001000000000000BC33 /* CrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB33 /* CrashReporter.swift */; };
 		BB000001000000000000BC25 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB25 /* MessageCell.swift */; };
 		BB000001000000000000BC26 /* ConversationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB26 /* ConversationListVC.swift */; };
 		BB000001000000000000BC27 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB27 /* ChatVC.swift */; };
 		BB000001000000000000BC28 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB28 /* SettingsVC.swift */; };
+		BB000001000000000000BC40 /* HostsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB40 /* HostsListVC.swift */; };
+		BB000001000000000000BC41 /* HostEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB41 /* HostEditVC.swift */; };
+		BB000001000000000000BC42 /* SessionsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB42 /* SessionsListVC.swift */; };
+		BB000001000000000000BC43 /* PaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB43 /* PaneVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,15 +69,25 @@
 		BB000001000000000000BB03 /* curl_bridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = curl_bridge.c; sourceTree = "<group>"; };
 		BB000001000000000000BB04 /* atomic_stubs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atomic_stubs.c; sourceTree = "<group>"; };
 		BB000001000000000000BB05 /* atomic_stubs.S */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = atomic_stubs.S; sourceTree = "<group>"; };
+		BB000001000000000000BB06 /* compat_shims.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compat_shims.c; sourceTree = "<group>"; };
 		BB000001000000000000BB20 /* OpenRouterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouterAPI.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB29 /* SSHClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHClient.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB21 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB22 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB23 /* ConversationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationStore.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB24 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB30 /* RemoteHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHost.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB31 /* RemoteHostStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHostStore.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB32 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB33 /* CrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReporter.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB25 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB26 /* ConversationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListVC.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB27 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB28 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB40 /* HostsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsListVC.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB41 /* HostEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostEditVC.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB42 /* SessionsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListVC.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB43 /* PaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaneVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +170,12 @@
 			isa = PBXGroup;
 			children = (
 				BB000001000000000000BB20 /* OpenRouterAPI.swift */,
+				BB000001000000000000BB29 /* SSHClient.swift */,
 				BB000001000000000000BB02 /* CurlFetcher.swift */,
 				BB000001000000000000BB03 /* curl_bridge.c */,
 				BB000001000000000000BB04 /* atomic_stubs.c */,
 				BB000001000000000000BB05 /* atomic_stubs.S */,
+				BB000001000000000000BB06 /* compat_shims.c */,
 			);
 			name = Networking;
 			path = Networking;
@@ -166,6 +188,10 @@
 				BB000001000000000000BB22 /* Conversation.swift */,
 				BB000001000000000000BB23 /* ConversationStore.swift */,
 				BB000001000000000000BB24 /* Settings.swift */,
+				BB000001000000000000BB30 /* RemoteHost.swift */,
+				BB000001000000000000BB31 /* RemoteHostStore.swift */,
+				BB000001000000000000BB32 /* Keychain.swift */,
+				BB000001000000000000BB33 /* CrashReporter.swift */,
 			);
 			name = Models;
 			path = Models;
@@ -186,6 +212,10 @@
 				BB000001000000000000BB26 /* ConversationListVC.swift */,
 				BB000001000000000000BB27 /* ChatVC.swift */,
 				BB000001000000000000BB28 /* SettingsVC.swift */,
+				BB000001000000000000BB40 /* HostsListVC.swift */,
+				BB000001000000000000BB41 /* HostEditVC.swift */,
+				BB000001000000000000BB42 /* SessionsListVC.swift */,
+				BB000001000000000000BB43 /* PaneVC.swift */,
 			);
 			name = ViewControllers;
 			path = ViewControllers;
@@ -325,15 +355,25 @@
 				BB000001000000000000BC03 /* curl_bridge.c in Sources */,
 				BB000001000000000000BC04 /* atomic_stubs.c in Sources */,
 				BB000001000000000000BC05 /* atomic_stubs.S in Sources */,
+				BB000001000000000000BC06 /* compat_shims.c in Sources */,
 				BB000001000000000000BC20 /* OpenRouterAPI.swift in Sources */,
+				BB000001000000000000BC29 /* SSHClient.swift in Sources */,
 				BB000001000000000000BC21 /* ChatMessage.swift in Sources */,
 				BB000001000000000000BC22 /* Conversation.swift in Sources */,
 				BB000001000000000000BC23 /* ConversationStore.swift in Sources */,
 				BB000001000000000000BC24 /* Settings.swift in Sources */,
+				BB000001000000000000BC30 /* RemoteHost.swift in Sources */,
+				BB000001000000000000BC31 /* RemoteHostStore.swift in Sources */,
+				BB000001000000000000BC32 /* Keychain.swift in Sources */,
+				BB000001000000000000BC33 /* CrashReporter.swift in Sources */,
 				BB000001000000000000BC25 /* MessageCell.swift in Sources */,
 				BB000001000000000000BC26 /* ConversationListVC.swift in Sources */,
 				BB000001000000000000BC27 /* ChatVC.swift in Sources */,
 				BB000001000000000000BC28 /* SettingsVC.swift in Sources */,
+				BB000001000000000000BC40 /* HostsListVC.swift in Sources */,
+				BB000001000000000000BC41 /* HostEditVC.swift in Sources */,
+				BB000001000000000000BC42 /* SessionsListVC.swift in Sources */,
+				BB000001000000000000BC43 /* PaneVC.swift in Sources */,
 				A34362FF2FD764260064ADE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,9 +546,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/curl/include";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/curl/lib";
-				OTHER_LDFLAGS = "-lcurl -lssl -lcrypto -lz";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/ThirdParty/curl/include",
+					"$(SRCROOT)/ThirdParty/libssh2/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/ThirdParty/curl/lib",
+					"$(SRCROOT)/ThirdParty/libssh2/lib",
+				);
+				OTHER_LDFLAGS = "-lssh2 -lcurl -lssl -lcrypto -lz";
 				SWIFT_OBJC_BRIDGING_HEADER = "cai/cai-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,9 +579,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/curl/include";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/curl/lib";
-				OTHER_LDFLAGS = "-lcurl -lssl -lcrypto -lz";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/ThirdParty/curl/include",
+					"$(SRCROOT)/ThirdParty/libssh2/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/ThirdParty/curl/lib",
+					"$(SRCROOT)/ThirdParty/libssh2/lib",
+				);
+				OTHER_LDFLAGS = "-lssh2 -lcurl -lssl -lcrypto -lz";
 				SWIFT_OBJC_BRIDGING_HEADER = "cai/cai-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
