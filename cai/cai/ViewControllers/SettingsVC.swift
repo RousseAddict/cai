@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 // Settings: the OpenRouter API key and the default model id used for new conversations.
 // Both persist to UserDefaults via `Settings`. Manual frame layout (iOS 6 conventions).
@@ -9,9 +10,18 @@ class SettingsVC: UIViewController, UITextFieldDelegate {
     private let keyField = UITextField()
     private let modelLabel = UILabel()
     private let modelField = UITextField()
+    private let ttsModelLabel = UILabel()
+    private let ttsModelField = UITextField()
+    private let ttsVoiceLabel = UILabel()
+    private let ttsVoiceField = UITextField()
+    private let testButton = UIButton(type: .custom)
+    private let testStatusLabel = UILabel()
     private let promptLabel = UILabel()
     private let promptView = UITextView()
     private let noteLabel = UILabel()
+
+    // Retains the player: AVAudioPlayer stops and deallocates if nothing holds it.
+    private static var testPlayer: AVAudioPlayer?
 
     private var keyboardHeight: CGFloat = 0
     private var didSetup = false
@@ -77,6 +87,45 @@ class SettingsVC: UIViewController, UITextFieldDelegate {
         modelField.text = Settings.defaultModel
         modelField.returnKeyType = .done
         scrollView.addSubview(modelField)
+
+        ttsModelLabel.text = "Voice Model"
+        ttsModelLabel.textColor = Theme.secondaryText
+        ttsModelLabel.backgroundColor = .clear
+        ttsModelLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        scrollView.addSubview(ttsModelLabel)
+
+        styleField(ttsModelField)
+        ttsModelField.placeholder = Settings.fallbackTTSModel
+        ttsModelField.text = Settings.ttsModel
+        ttsModelField.returnKeyType = .done
+        scrollView.addSubview(ttsModelField)
+
+        ttsVoiceLabel.text = "Voice"
+        ttsVoiceLabel.textColor = Theme.secondaryText
+        ttsVoiceLabel.backgroundColor = .clear
+        ttsVoiceLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        scrollView.addSubview(ttsVoiceLabel)
+
+        styleField(ttsVoiceField)
+        ttsVoiceField.placeholder = Settings.fallbackTTSVoice
+        ttsVoiceField.text = Settings.ttsVoice
+        ttsVoiceField.returnKeyType = .done
+        scrollView.addSubview(ttsVoiceField)
+
+        // .custom: .system ignores setTitleColor/backgroundColor on iOS 6.
+        testButton.setTitle("Test Voice", for: .normal)
+        testButton.setTitleColor(.white, for: .normal)
+        testButton.backgroundColor = Theme.accent
+        testButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        testButton.layer.cornerRadius = 10
+        testButton.addTarget(self, action: #selector(testVoiceTapped), for: .touchUpInside)
+        scrollView.addSubview(testButton)
+
+        testStatusLabel.textColor = Theme.secondaryText
+        testStatusLabel.backgroundColor = .clear
+        testStatusLabel.font = UIFont.systemFont(ofSize: 13)
+        testStatusLabel.numberOfLines = 0
+        scrollView.addSubview(testStatusLabel)
 
         promptLabel.text = "System Prompt (optional)"
         promptLabel.textColor = Theme.secondaryText
@@ -149,6 +198,23 @@ class SettingsVC: UIViewController, UITextFieldDelegate {
         modelField.frame = CGRect(x: margin, y: y, width: fieldW, height: fieldH)
         y += fieldH + 24
 
+        ttsModelLabel.frame = CGRect(x: margin, y: y, width: fieldW, height: 18)
+        y += 22
+        ttsModelField.frame = CGRect(x: margin, y: y, width: fieldW, height: fieldH)
+        y += fieldH + 24
+
+        ttsVoiceLabel.frame = CGRect(x: margin, y: y, width: fieldW, height: 18)
+        y += 22
+        ttsVoiceField.frame = CGRect(x: margin, y: y, width: fieldW, height: fieldH)
+        y += fieldH + 16
+
+        testButton.frame = CGRect(x: margin, y: y, width: fieldW, height: 46)
+        y += 46 + 8
+
+        let statusSize = testStatusLabel.sizeThatFits(CGSize(width: fieldW, height: .greatestFiniteMagnitude))
+        testStatusLabel.frame = CGRect(x: margin, y: y, width: fieldW, height: ceil(statusSize.height))
+        y += ceil(statusSize.height) + 24
+
         promptLabel.frame = CGRect(x: margin, y: y, width: fieldW, height: 18)
         y += 22
         promptView.frame = CGRect(x: margin, y: y, width: fieldW, height: 120)
@@ -168,6 +234,80 @@ class SettingsVC: UIViewController, UITextFieldDelegate {
         let model = (modelField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         Settings.defaultModel = model.isEmpty ? Settings.fallbackModel : model
         Settings.systemPrompt = (promptView.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        let ttsModel = (ttsModelField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        Settings.ttsModel = ttsModel.isEmpty ? Settings.fallbackTTSModel : ttsModel
+        let ttsVoice = (ttsVoiceField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        Settings.ttsVoice = ttsVoice.isEmpty ? Settings.fallbackTTSVoice : ttsVoice
+    }
+
+    // MARK: - Voice test
+    //
+    // Vertical slice of the TTS path: synthesize a fixed sentence, write the MP3 to disk, play
+    // it back. Confirms the endpoint, the model slug, the account's TTS access, and that the
+    // device can decode MP3 through the swapped-in Swift 5.1.5 AVFoundation overlay.
+
+    @objc private func testVoiceTapped() {
+        save()
+        guard Settings.hasAPIKey else {
+            setStatus("No API key set - add one above first.")
+            return
+        }
+
+        testButton.isEnabled = false
+        testButton.alpha = 0.4
+        testButton.setTitle("Synthesizing...", for: .normal)
+        setStatus("POSTing to \(TTSAPI.endpoint)...")
+
+        TTSAPI.synthesize(text: "Hello from cai. Text to speech is working on this device.",
+                          model: Settings.ttsModel,
+                          voice: Settings.ttsVoice,
+                          apiKey: Settings.apiKey) { [weak self] data, error in
+            guard let self = self else { return }
+            self.testButton.isEnabled = true
+            self.testButton.alpha = 1.0
+            self.testButton.setTitle("Test Voice", for: .normal)
+
+            if let error = error {
+                self.setStatus("FAILED: " + error)
+                return
+            }
+            guard let data = data else {
+                self.setStatus("FAILED: no audio returned.")
+                return
+            }
+            self.play(data)
+        }
+    }
+
+    private func play(_ data: Data) {
+        let path = NSTemporaryDirectory() + "tts_test.mp3"
+        // Data.write(toFile:atomically:) doesn't exist on this runtime - go through NSData.
+        guard (data as NSData).write(toFile: path, atomically: true) else {
+            setStatus("FAILED: could not write \(data.count) bytes to disk.")
+            return
+        }
+
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
+        try? AVAudioSession.sharedInstance().setActive(true)
+
+        do {
+            let player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            SettingsVC.testPlayer = player
+            player.prepareToPlay()
+            if player.play() {
+                setStatus(String(format: "OK: %d bytes, %.1fs - playing.",
+                                 data.count, player.duration))
+            } else {
+                setStatus("FAILED: player refused to start (\(data.count) bytes).")
+            }
+        } catch {
+            setStatus("FAILED: could not decode \(data.count) bytes - \(error)")
+        }
+    }
+
+    private func setStatus(_ text: String) {
+        testStatusLabel.text = text
+        layoutViews()
     }
 
     // MARK: - Keyboard

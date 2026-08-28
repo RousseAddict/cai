@@ -64,8 +64,9 @@ class CurlFetcher {
     // Serial gate: holds back dispatch to curlQueue until a slot frees, so we never spawn
     // a worker thread per queued request (iPhone 4S has a hard thread/stack-memory budget).
     private static let gateQueue = DispatchQueue(label: "com.cai.curl.gate")
-    // Caps concurrent in-flight transfers.
-    private static let curlLimit = DispatchSemaphore(value: 2)
+    // Caps concurrent in-flight transfers. A live SSE chat stream occupies one slot for its
+    // whole duration, so keep room for speech synthesis plus one other request alongside it.
+    private static let curlLimit = DispatchSemaphore(value: 3)
     // dispatch_once via static let — runs exactly once even under concurrent first access
     // (Swift lazy-static init is thread-safe), so curl_global_init is never called concurrently.
     private static let curlGlobalInit: Bool = { curl_bridge_global_init(); return true }()

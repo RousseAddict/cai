@@ -53,6 +53,11 @@ class ChatVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITe
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
+
+        // TTSPlayer is a singleton, so it would outlive this VC — weak self, and both
+        // closures are cleared again in viewWillDisappear.
+        TTSPlayer.shared.onStateChange = { [weak self] in self?.refreshSpeakButtons() }
+        TTSPlayer.shared.onError = { [weak self] message in self?.showSpeechError(message) }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,6 +68,10 @@ class ChatVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITe
         caretTimer = nil
         refreshTimer?.invalidate()
         refreshTimer = nil
+        // Don't keep talking over whatever screen comes next.
+        TTSPlayer.shared.stop()
+        TTSPlayer.shared.onStateChange = nil
+        TTSPlayer.shared.onError = nil
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -228,6 +237,8 @@ class ChatVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITe
                     }
                     self.reloadLastRow()
                 }
+                // Flush the tail the refresh timer may not have picked up, then close the stream.
+                self.feedSpeech(row: assistantIndex, complete: true)
                 self.setStreaming(false)
                 ConversationStore.shared.save(self.conversation)
             }
@@ -268,7 +279,55 @@ class ChatVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITe
     @objc private func flushRender() {
         guard pendingRender else { return }
         pendingRender = false
+        feedSpeech(row: conversation.messages.count - 1, complete: false)
         reloadLastRow(scroll: true)
+    }
+
+    // MARK: - Speech
+
+    // Messages have no id of their own, so a row is identified by conversation + index.
+    // Rows are only ever appended, so an index stays valid for the life of the screen.
+    private func speakKey(_ row: Int) -> String {
+        return conversation.id + ":" + String(row)
+    }
+
+    private func toggleSpeak(row: Int) {
+        guard row < conversation.messages.count else { return }
+        let key = speakKey(row)
+        if TTSPlayer.shared.isSpeaking(key: key) {
+            TTSPlayer.shared.stop()
+            return
+        }
+        guard Settings.hasAPIKey else {
+            promptForKey()
+            return
+        }
+        let text = MessageCell.speakableText(conversation.messages[row].content)
+        // A reply that is still streaming is spoken as it arrives (see feedSpeech).
+        TTSPlayer.shared.speak(key: key, text: text, isComplete: !isStreamingRow(row))
+    }
+
+    // Pushes the latest text of a streaming reply to the player. The isSpeaking guard also
+    // keeps us from re-deriving speakable text 10x a second when nothing is being spoken.
+    private func feedSpeech(row: Int, complete: Bool) {
+        guard row >= 0, row < conversation.messages.count else { return }
+        let key = speakKey(row)
+        guard TTSPlayer.shared.isSpeaking(key: key) else { return }
+        TTSPlayer.shared.append(key: key, fullText: MessageCell.speakableText(conversation.messages[row].content))
+        if complete { TTSPlayer.shared.finish(key: key) }
+    }
+
+    private func refreshSpeakButtons() {
+        guard let paths = tableView.indexPathsForVisibleRows else { return }
+        for path in paths {
+            guard let cell = tableView.cellForRow(at: path) as? MessageCell else { continue }
+            cell.setSpeaking(TTSPlayer.shared.isSpeaking(key: speakKey(path.row)))
+        }
+    }
+
+    private func showSpeechError(_ message: String) {
+        UIAlertView(title: "Speech Failed", message: message,
+                    delegate: nil, cancelButtonTitle: "OK").show()
     }
 
     private func promptForKey() {
@@ -295,7 +354,11 @@ class ChatVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITe
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MessageCell.reuseID, for: indexPath) as! MessageCell
-        cell.configure(with: conversation.messages[indexPath.row], showCaret: showCaret(at: indexPath.row))
+        let row = indexPath.row
+        cell.configure(with: conversation.messages[row],
+                       showCaret: showCaret(at: row),
+                       isSpeaking: TTSPlayer.shared.isSpeaking(key: speakKey(row)))
+        cell.onSpeak = { [weak self] in self?.toggleSpeak(row: row) }
         return cell
     }
 

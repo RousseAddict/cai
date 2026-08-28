@@ -24,12 +24,18 @@ class MessageCell: UITableViewCell {
     private static let vInset: CGFloat = 8    // text inset inside bubble (top/bottom)
     private static let hMargin: CGFloat = 10  // bubble margin from screen edge
     private static let vMargin: CGFloat = 5   // cell top/bottom margin
+    private static let speakButtonHeight: CGFloat = 26
+    private static let speakButtonGap: CGFloat = 2
 
     // A block caret appended while the assistant reply is still streaming.
     private static let caret = "\u{258C}"
 
     private let bubble = UIView()
     private let label = UILabel()
+    private let speakButton = UIButton(type: .custom)   // .system ignores title colors on iOS 6
+
+    // Invoked when the user taps Speak/Stop. Reset on every configure() (cells are reused).
+    var onSpeak: (() -> Void)?
 
     // Reused off-screen for height measurement (never added to the view hierarchy).
     private static let sizingLabel: UILabel = {
@@ -54,18 +60,40 @@ class MessageCell: UITableViewCell {
         label.backgroundColor = .clear         // iOS 6: labels default to white bg
         label.textColor = Theme.primaryText
         bubble.addSubview(label)
+
+        speakButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        speakButton.setTitleColor(Theme.accent, for: .normal)
+        speakButton.backgroundColor = .clear
+        speakButton.contentHorizontalAlignment = .left
+        speakButton.addTarget(self, action: #selector(speakTapped), for: .touchUpInside)
+        contentView.addSubview(speakButton)
     }
+
+    @objc private func speakTapped() { onSpeak?() }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     private var isUser = false
 
-    func configure(with message: ChatMessage, showCaret: Bool = false) {
+    func configure(with message: ChatMessage, showCaret: Bool = false, isSpeaking: Bool = false) {
         isUser = message.isUser
         label.attributedText = MessageCell.format(message.content, showCaret: showCaret)
         // User messages sit in an accent bubble; assistant replies are full-width, no bubble.
         bubble.backgroundColor = isUser ? Theme.userBubble : .clear
+        onSpeak = nil
+        speakButton.isHidden = !MessageCell.showsSpeakButton(for: message)
+        setSpeaking(isSpeaking)
         setNeedsLayout()
+    }
+
+    // Retitles the button without a reload, so toggling playback doesn't reparse markdown.
+    func setSpeaking(_ speaking: Bool) {
+        speakButton.setTitle(speaking ? "Stop" : "Speak", for: .normal)
+    }
+
+    // Only assistant replies are speakable, and only once they have some text.
+    static func showsSpeakButton(for message: ChatMessage) -> Bool {
+        return !message.isUser && !message.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
     override func layoutSubviews() {
@@ -92,6 +120,9 @@ class MessageCell: UITableViewCell {
                                   width: maxTextWidth, height: bubbleH)
             label.frame = CGRect(x: 0, y: MessageCell.vInset,
                                  width: maxTextWidth, height: textSize.height)
+            speakButton.frame = CGRect(x: MessageCell.hMargin,
+                                       y: bubble.frame.maxY + MessageCell.speakButtonGap,
+                                       width: 80, height: MessageCell.speakButtonHeight)
         }
     }
 
@@ -110,7 +141,8 @@ class MessageCell: UITableViewCell {
             : cellWidth - 2 * hMargin
         let attr = format(message.content, showCaret: showCaret)
         let textSize = textSize(for: attr, maxWidth: maxTextWidth)
-        return textSize.height + 2 * vInset + 2 * vMargin
+        let speakSpace = showsSpeakButton(for: message) ? speakButtonGap + speakButtonHeight : 0
+        return textSize.height + 2 * vInset + 2 * vMargin + speakSpace
     }
 
     // MARK: - Markdown
@@ -257,6 +289,30 @@ class MessageCell: UITableViewCell {
         r = replaceRegex(r, italicRE, "$1")
         r = replaceRegex(r, codeRE, "$1")
         return r
+    }
+
+    // MARK: - Speech
+
+    // Plain text for text-to-speech. Fenced code blocks are dropped silently (reading code
+    // aloud is unusable), tables are reflowed into the same records shown on screen, and all
+    // markdown markers are removed so they aren't pronounced.
+    //
+    // A fence that hasn't closed yet swallows the rest of the string — which is what we want
+    // while a reply is still streaming: the tail is held back until the closing ``` arrives.
+    static func speakableText(_ text: String) -> String {
+        var kept: [String] = []
+        var inFence = false
+        for line in text.components(separatedBy: "\n") {
+            if line.trimmingCharacters(in: .whitespaces).hasPrefix("```") {
+                inFence = !inFence
+                continue
+            }
+            if !inFence { kept.append(line) }
+        }
+        var s = preprocessTables(kept.joined(separator: "\n"))
+        s = replaceRegex(s, headerRE, "$2")   // drop the leading #s, keep the title
+        s = stripInline(s)
+        return s.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     private static func replaceRegex(_ s: String, _ re: NSRegularExpression?, _ template: String) -> String {

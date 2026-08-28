@@ -19,11 +19,13 @@
 		BB000001000000000000BC05 /* atomic_stubs.S in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB05 /* atomic_stubs.S */; };
 		BB000001000000000000BC06 /* compat_shims.c in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB06 /* compat_shims.c */; settings = {COMPILER_FLAGS = "-fno-builtin"; }; };
 		BB000001000000000000BC20 /* OpenRouterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB20 /* OpenRouterAPI.swift */; };
+		BB000001000000000000BC44 /* TTSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB44 /* TTSAPI.swift */; };
 		BB000001000000000000BC29 /* SSHClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB29 /* SSHClient.swift */; };
 		BB000001000000000000BC21 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB21 /* ChatMessage.swift */; };
 		BB000001000000000000BC22 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB22 /* Conversation.swift */; };
 		BB000001000000000000BC23 /* ConversationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB23 /* ConversationStore.swift */; };
 		BB000001000000000000BC24 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB24 /* Settings.swift */; };
+		BB000001000000000000BC45 /* TTSPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB45 /* TTSPlayer.swift */; };
 		BB000001000000000000BC30 /* RemoteHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB30 /* RemoteHost.swift */; };
 		BB000001000000000000BC31 /* RemoteHostStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB31 /* RemoteHostStore.swift */; };
 		BB000001000000000000BC32 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001000000000000BB32 /* Keychain.swift */; };
@@ -71,11 +73,13 @@
 		BB000001000000000000BB05 /* atomic_stubs.S */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = atomic_stubs.S; sourceTree = "<group>"; };
 		BB000001000000000000BB06 /* compat_shims.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compat_shims.c; sourceTree = "<group>"; };
 		BB000001000000000000BB20 /* OpenRouterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouterAPI.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB44 /* TTSAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSAPI.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB29 /* SSHClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHClient.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB21 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB22 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB23 /* ConversationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationStore.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB24 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BB000001000000000000BB45 /* TTSPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSPlayer.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB30 /* RemoteHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHost.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB31 /* RemoteHostStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHostStore.swift; sourceTree = "<group>"; };
 		BB000001000000000000BB32 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				BB000001000000000000BB20 /* OpenRouterAPI.swift */,
+				BB000001000000000000BB44 /* TTSAPI.swift */,
 				BB000001000000000000BB29 /* SSHClient.swift */,
 				BB000001000000000000BB02 /* CurlFetcher.swift */,
 				BB000001000000000000BB03 /* curl_bridge.c */,
@@ -188,6 +193,7 @@
 				BB000001000000000000BB22 /* Conversation.swift */,
 				BB000001000000000000BB23 /* ConversationStore.swift */,
 				BB000001000000000000BB24 /* Settings.swift */,
+				BB000001000000000000BB45 /* TTSPlayer.swift */,
 				BB000001000000000000BB30 /* RemoteHost.swift */,
 				BB000001000000000000BB31 /* RemoteHostStore.swift */,
 				BB000001000000000000BB32 /* Keychain.swift */,
@@ -357,11 +363,13 @@
 				BB000001000000000000BC05 /* atomic_stubs.S in Sources */,
 				BB000001000000000000BC06 /* compat_shims.c in Sources */,
 				BB000001000000000000BC20 /* OpenRouterAPI.swift in Sources */,
+				BB000001000000000000BC44 /* TTSAPI.swift in Sources */,
 				BB000001000000000000BC29 /* SSHClient.swift in Sources */,
 				BB000001000000000000BC21 /* ChatMessage.swift in Sources */,
 				BB000001000000000000BC22 /* Conversation.swift in Sources */,
 				BB000001000000000000BC23 /* ConversationStore.swift in Sources */,
 				BB000001000000000000BC24 /* Settings.swift in Sources */,
+				BB000001000000000000BC45 /* TTSPlayer.swift in Sources */,
 				BB000001000000000000BC30 /* RemoteHost.swift in Sources */,
 				BB000001000000000000BC31 /* RemoteHostStore.swift in Sources */,
 				BB000001000000000000BC32 /* Keychain.swift in Sources */,
